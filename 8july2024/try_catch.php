@@ -9,6 +9,6 @@ try {
     }
     } catch (Exception $e) {
     echo "Error (File: ".$e->getFile().", line ".
-    $e->getLine()."): ".$->getMessage();
+    $e->getLine()."): ".$e->getMessage();
     }
 ?>
