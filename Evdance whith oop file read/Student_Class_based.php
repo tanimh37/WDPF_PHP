@@ -9,31 +9,32 @@
 
 <?php 
 if (isset($_REQUEST['submit'])) {
-    $stid = $_REQUEST['stid'] ;
-    $obj = new student('result.txt');
-    $obj->show_result($stid);
+    $stide = $_REQUEST['sti'] ;
+    $obj = new Student('result.txt');
+    $obj->show_result($stide);
 
 }
     // echo"<pre>" ;
 
     // print_r($datas) ;
 
-    class student {
+    class Student {
 
-        public $datas;
-        public $arrayData;
+        public $datasi;
+        //public $arrayData;
         
         public function __construct($file) {
-            $this->datas = $file ;
-            $this->arrayData = file($this->datas) ;
+            $this->datasi = file($file);
+            //$this->datasi = $file ;
+            //$this->arrayData = file($this->datasi) ;
         }
 
-        public function show_result($stid) {
+        public function show_result($tanim) {
     
-    foreach ($this->arrayData as $data) {
+    foreach ($this->datasi as $data) {
         $line = explode("|", $data) ;
         list($id , $name , $score ,$result) = $line ;
-        if($id==$stid){
+        if($id==$tanim){
             $output = "ID : " .  $id ."<br>" . " Name : " . $name . "<br>" . " Score : " . $score . "<br>" . " Result  : " . $result;
           
         }
@@ -48,9 +49,9 @@ if (isset($_REQUEST['submit'])) {
 
 
     <form action="" method="post">
-        <select name="stid" id="">
-            <option value="1">Saif</option>
-            <option value="2">Zamil</option>
+        <select name="sti" id="">
+            <option value="12">Saif</option>
+            <option value="21">Zamil</option>
             <option value="3">Tanim</option>
 
         </select>
