@@ -6,6 +6,7 @@
     <title>prime number check</title>
 </head>
 <body>
+    Ans-3
     <?php
 if(isset($_POST['submit'])) {
         // print_r() ;
@@ -18,7 +19,7 @@ if(isset($_POST['submit'])) {
         function primeCheck($n) {
 
 
-            if ($n == 1) { 
+            if ($n == 1) {
                 return  $n . "Is not a prime number";
             }
 
@@ -44,7 +45,7 @@ if(isset($_POST['submit'])) {
 ?>
 
     <form action="" method="post">
-        <input type="text" name="number"> 
+        <input type="text" name="number" placeholder="enter your chacking number"> 
         <input type="submit" name="submit" value="CHECK">
     </form>
 </body>

@@ -1,0 +1,4 @@
+10|Mascara|400
+11|Eye-liner|280
+12|Foundation|750
+13|Dove-Sampoo|480
