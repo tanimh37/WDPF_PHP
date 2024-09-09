@@ -1,0 +1,30 @@
+<?php $db = new mysqli("localhost:3306","root","","class_exam") ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Ans to the qs no-1</h2>
+    <h3>Store Procedure</h3>
+    <?php
+    if(isset($_POST['submit'])){
+        extract($_POST);
+        if($db->query("CALL add_manufacture('$name','$address','$contact')")){
+            echo "Successfully added";
+        } else {
+            echo "Failed to add";
+        }
+    }
+    ?>
+    <form action="" method="post">
+        <input type="text" name="name" placeholder="Enter your manufacturer name"> <br>
+        <textarea name="address" id="" placeholder="Inter address"></textarea><br>
+        <input type="text" name="contact" placeholder="Please enter cell number" > <br>
+        <input type="submit" name="submit" value="ADD">
+    </form>
+    <a href="manufacturer_deleted.php">Manufacturer List</a>
+</body>
+</html>
