@@ -132,6 +132,14 @@
                     </div>
                     <!-- end row -->
 
+                    <!-- modal -->
+
+                                                                <div class="text-center">
+                                                <p class="text-muted">Small modal</p>
+                                                <!-- Small modal -->
+                                                <button type="button" class="btn btn-primary waves-effect waves-light" data-toggle="modal" data-target=".bs-example-modal-sm">Small modal</button>
+                                            </div>
+
                 </div>
                 <!-- container-fluid -->
 
